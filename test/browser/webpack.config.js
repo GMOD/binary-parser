@@ -1,10 +1,11 @@
-const path = require("path");
+/* eslint-disable @typescript-eslint/no-var-requires */
+const path = require('path');
 
 module.exports = {
-  entry: path.resolve(__dirname, "entry.js"),
+  entry: path.resolve(__dirname, 'entry.js'),
   output: {
     path: __dirname,
-    filename: "bundle.js"
+    filename: 'bundle.js',
   },
-  mode: "development"
+  mode: 'development',
 };

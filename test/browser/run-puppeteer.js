@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-env node */
 
-const puppeteer = require("puppeteer");
-const path = require("path");
+const puppeteer = require('puppeteer');
+const path = require('path');
 
 let browser;
 return puppeteer
@@ -13,10 +14,12 @@ return puppeteer
   .then(
     page =>
       new Promise(async (resolve, reject) => {
-        page.on("console", msg => {
+        page.on('console', msg => {
           console.log(msg.text());
         });
-        await page.goto(process.argv[2] || `file:${path.join(__dirname, "run-mocha.html")}`);
+        await page.goto(
+          process.argv[2] || `file:${path.join(__dirname, 'run-mocha.html')}`,
+        );
         return page
           .evaluate(
             () =>
@@ -33,20 +36,20 @@ return puppeteer
                     }
                   }
                 }, 500);
-              })
+              }),
           )
           .then(resolve, reject);
-      })
+      }),
   )
   .then(
-    (res) => {
+    res => {
       browser.close();
-      console.log('success', JSON.stringify(res))
+      console.log('success', JSON.stringify(res));
       process.exit(0);
     },
-    (err) => {
+    err => {
       browser.close();
-      console.log('failure', JSON.stringify(err))
+      console.log('failure', JSON.stringify(err));
       process.exit(1);
-    }
+    },
   );
