@@ -15,7 +15,7 @@
     "eslint-plugin-import": "^2.10.0",
     "eslint-plugin-prettier": "^3.1.0",
     "jest": "^24.7.1",
-    "mocha": "^6.0.0",
+    "mocha": "^7.0.1",
     "prettier": "^1.9.2",
     "puppeteer": "^1.11.0",
     "webpack": "^4.37.0",
