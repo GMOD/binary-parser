@@ -1,6 +1,6 @@
 {
   "name": "@gmod/binary-parser",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Blazing-fast binary parser builder",
   "main": "dist/binary_parser.js",
   "devDependencies": {
@@ -28,6 +28,7 @@
     "prebuild": "npm run clean",
     "build": "babel lib -d dist",
     "test-webpack": "webpack --config test/browser/webpack.config.js && node test/browser/run-puppeteer.js",
+    "preversion": "npm run lint && npm run test && npm run build",
     "postversion": "git push --follow-tags"
   },
   "browser": {
