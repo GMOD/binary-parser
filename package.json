@@ -27,6 +27,9 @@
     "build": "babel lib -d dist",
     "test-webpack": "webpack --config test/browser/webpack.config.js && node test/browser/run-puppeteer.js"
   },
+  "browser": {
+    "vm": "./vm-browser.js"
+  },
   "keywords": [
     "binary",
     "parser",
