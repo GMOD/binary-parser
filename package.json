@@ -24,6 +24,8 @@
   "scripts": {
     "test": "jest",
     "lint": "eslint lib example test/*.js",
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
     "build": "babel lib -d dist",
     "test-webpack": "webpack --config test/browser/webpack.config.js && node test/browser/run-puppeteer.js",
     "postversion": "git push --follow-tags"
