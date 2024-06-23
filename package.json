@@ -1,6 +1,6 @@
 {
   "name": "@gmod/binary-parser",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "Blazing-fast binary parser builder",
   "main": "dist/binary_parser.js",
   "devDependencies": {
