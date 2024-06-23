@@ -31,9 +31,6 @@
     "preversion": "npm run lint && npm run test && npm run build",
     "postversion": "git push --follow-tags"
   },
-  "browser": {
-    "vm": "./vm-browser.js"
-  },
   "keywords": [
     "binary",
     "parser",
